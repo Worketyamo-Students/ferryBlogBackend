@@ -1,4 +1,4 @@
-FROM mongo-express:1.0.2-20-alpine3.19
+FROM postgres
 
 WORKDIR /usr/src/app
 
@@ -11,6 +11,6 @@ COPY . .
 
 RUN yarn build
 
-EXPOSE 3000
+EXPOSE 5432
 
 CMD ["node", "dist/app.js"]
